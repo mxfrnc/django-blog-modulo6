@@ -1,0 +1,170 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fuente general */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 40px;
+}
+
+/* Contenedor central */
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Navegación */
+nav {
+    margin-bottom: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #007bff;
+    padding: 8px 14px;
+    border-radius: 6px;
+    margin-right: 10px;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #0056b3;
+}
+
+/* Títulos */
+h1 {
+    margin-bottom: 25px;
+    color: #222;
+}
+
+h2 {
+    margin-bottom: 8px;
+}
+
+/* Post */
+article {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+}
+
+article:hover {
+    transform: translateY(-3px);
+}
+
+/* Links */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Fecha */
+small {
+    color: #777;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Paginación */
+.pagination {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.pagination a {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 0 5px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 6px;
+    transition: 0.3s ease;
+}
+
+.pagination a:hover {
+    background-color: #0056b3;
+}
+
+.pagination span {
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+/* Separadores */
+hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 15px 0;
+}
+/* FORMULARIO */
+.formulario {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.btn {
+    background: #007bff;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+/* MENSAJES */
+.mensaje {
+    background: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+/* ERRORES */
+.errorlist {
+    color: red;
+    list-style: none;
+    font-size: 13px;
+    margin-top: 5px;
+}

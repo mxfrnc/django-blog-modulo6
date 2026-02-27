@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Mi Proyecto Django{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'core/estilos.css' %}">
+</head>
+<body>
+
+<div class="container">
+
+    <nav>
+        <a href="{% url 'inicio' %}">Inicio</a>
+        <a href="{% url 'crear_post' %}">Crear Post</a>
+        <a href="{% url 'nosotros' %}">Nosotros</a>
+    </nav>
+
+    <hr>
+
+    {% if messages %}
+        {% for message in messages %}
+            <div class="mensaje">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    {% block content %}
+    {% endblock %}
+
+</div>
+
+</body>
+</html>
