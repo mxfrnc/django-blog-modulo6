@@ -5,7 +5,7 @@ env/
 # Base de datos
 db.sqlite3
 
-# Archivos compilados de Python
+# Archivos compilados
 __pycache__/
 *.pyc
 
