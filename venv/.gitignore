@@ -1,17 +1,6 @@
-# Entorno virtual
 venv/
-env/
-
-# Base de datos
-db.sqlite3
-
-# Archivos compilados
 __pycache__/
 *.pyc
-
-# Archivos del sistema
-.DS_Store
-Thumbs.db
-
-# Variables de entorno
+db.sqlite3
 .env
+*.log
