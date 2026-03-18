@@ -4,17 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}Mi Proyecto Django{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'core/estilos.css' %}">
+    <link rel="stylesheet" href="{% static 'estilos.css' %}">
 </head>
 <body>
 
 <div class="container">
 
     <nav>
-        <a href="{% url 'inicio' %}">Inicio</a>
-        <a href="{% url 'crear_post' %}">Crear Post</a>
-        <a href="{% url 'nosotros' %}">Nosotros</a>
-    </nav>
+    <a href="{% url 'inicio' %}">Inicio</a>
+    <a href="{% url 'crear_post' %}">Crear Post</a>
+    <a href="{% url 'nosotros' %}">Nosotros</a>
+
+    {% if user.is_authenticated %}
+        <span>
+            Hola, {{ user.username }}
+            ({{ user.perfil.tipo_usuario|title }})
+        </span>
+
+        <form action="{% url 'logout' %}" method="post" style="display:inline;">
+    {% csrf_token %}
+    <button type="submit">Cerrar sesión</button>
+</form>
+
+    {% else %}
+        <a href="{% url 'login' %}">Login</a>
+        <a href="{% url 'registro' %}">Registro</a>
+    {% endif %}
+</nav>
 
     <hr>
 

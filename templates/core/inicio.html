@@ -14,9 +14,11 @@
             </a>
         </h2>
 
-        <small>Publicado el {{ post.fecha_creacion|date:"d M Y" }}</small>
+        <small>
+            Publicado el {{ post.fecha_publicacion }} por {{ post.autor.username }}
+        </small>
 
-        <p>{{ post.excerpt }}</p>
+        <p>{{ post.contenido|truncatewords:20 }}</p>
 
         <hr>
     </article>
@@ -24,7 +26,6 @@
 {% empty %}
     <p>No hay publicaciones aún.</p>
 {% endfor %}
-
 
 <div class="pagination">
 
